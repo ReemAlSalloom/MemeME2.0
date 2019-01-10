@@ -10,13 +10,6 @@ import Foundation
 import UIKit
 
 struct Meme {
-    
-    // MARK: Properties
-    
-    let name: String
-    let evilScheme: String
-    let imageName: String
-    
   
         var topText: String!
         var bottomText: String!
@@ -27,23 +20,18 @@ struct Meme {
     {}
     
     func save() {
-        // Create meme
+        // TODO: Create meme, do I need to call this save() here or use it in EditMemeViewController
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
     }
     
    
 }
+
+//TODO: when do I need extension?
 extension Meme {
     
-    // Generate an array full of all of the villains
     static var allMemes: [Meme] {
         
-        var memeArray = [Meme]()
         
-        for d in Meme.localMemeData() {
-            memeArray.append(Meme(dictionary: d))
-        }
-        
-        return memeArray
 }
 }

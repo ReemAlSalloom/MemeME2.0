@@ -13,16 +13,13 @@ import UIKit
 
 class MemeCollectionViewController: UICollectionViewController {
     
-    // MARK: Properties
-    
-    // Get ahold of some villains, for the table
-    // This is an array of Villain instances.
     let allMemes = Meme.allMemes
     
-    // MARK: Life Cycle
+    
     var memes: [Meme]! {
         let object =  UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
+        // TODO: why? memes object is already in appdelegate
         return AppDelegate.memes
     }
     
@@ -31,7 +28,6 @@ class MemeCollectionViewController: UICollectionViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
-    // MARK: Collection View Data Source
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.allMemes.count
@@ -42,10 +38,7 @@ class MemeCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MemeCollectionViewCell", for: indexPath) as! MemeCollectionViewCell
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
         
-        // Set the name and image ????
-        cell.nameLabel.text = meme.name
-        cell.memeImageView?.image = UIImage(named: meme.imageName)
-        //cell.schemeLabel.text = "Scheme: \(villain.evilScheme)"
+        cell.memeImageView?.image =  meme.memedImage
         
         return cell
     }

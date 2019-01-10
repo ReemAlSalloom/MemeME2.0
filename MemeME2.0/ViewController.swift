@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     let allMemes = Meme.allMemes
     
-    // MARK: Table View Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.allMemes.count
@@ -28,7 +27,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
         let meme = self.allMemes[(indexPath as NSIndexPath).row]
         
-        // Set the name and image ???
+        //TODO: Set the name and image ???
         cell.textLabel?.text = meme.topText
         cell.imageView?.image = UIImage(named: meme.imageName)
         

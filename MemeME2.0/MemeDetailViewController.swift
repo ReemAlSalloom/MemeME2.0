@@ -11,20 +11,15 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    // MARK: Properties
     
     var meme: Meme!
     
-    // MARK: Outlets
+    @IBOutlet weak var imageView: UIImageView!
     
-   // @IBOutlet weak var imageView: UIImageView!
-    //@IBOutlet weak var label: UILabel!
-    
-    // MARK: Life Cycle
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.label.text = self.meme.name
+        //TODO: where should I define this property?
         self.tabBarController?.tabBar.isHidden = true
         self.imageView!.image = UIImage(named: meme.imageName)
     }

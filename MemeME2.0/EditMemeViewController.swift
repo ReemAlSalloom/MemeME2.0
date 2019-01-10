@@ -76,7 +76,6 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         //create activity controller and pass the MememedImage
         let controller = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         
-        //Issue: not sure this works!
         controller.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
             
             self.save()
@@ -144,7 +143,6 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func generateMemedImage() -> UIImage {
         
-        // TODO: Hide toolbar and navbar
         toggleBars(flag : true)
         
         // Render view to an image
@@ -154,7 +152,6 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         UIGraphicsEndImageContext()
         
         
-        // TODO: Show toolbar and navbar
         toggleBars(flag : false)
         return memedImage
     }
@@ -176,6 +173,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         //(UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        //TODO: issue why cant I append new meme??
         appDelegate.memes.append(meme)
     }
     
@@ -199,7 +197,6 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         view.frame.origin.y = 0
     }
     
-    //Issue: Keyboard doesnt show up at all
     func subscribeToKeyboardNotification()
     {
         
