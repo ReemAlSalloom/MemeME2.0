@@ -16,22 +16,22 @@ struct Meme {
         var originalImage:UIImage!
         var memedImage: UIImage!
     
-    init()
-    {}
-    
-    func save() {
-        // TODO: Create meme, do I need to call this save() here or use it in EditMemeViewController
-        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+    init(top: String, bottom: String, img: UIImage, mImg: UIImage)
+    {
+        topText = top
+        bottomText = bottom
+        originalImage = img
+        memedImage = mImg
+        
     }
+    
+//    func save() {
+//        // TODO: Create meme, do I need to call this save() here or use it in EditMemeViewController
+//        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+//    }
     
    
 }
 
-//TODO: when do I need extension?
-extension Meme {
-    
-    static var allMemes: [Meme] {
-        
-        
-}
-}
+
+

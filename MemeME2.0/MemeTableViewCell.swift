@@ -9,10 +9,11 @@
 import Foundation
 import UIKit
 
-class MemeCollectionViewCell: UICollectionViewCell {
+class MemeTableViewCell: UITableViewCell {
     
     //TODO: howcan I link this to collection images?
     @IBOutlet weak var memeImageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
     
     
     

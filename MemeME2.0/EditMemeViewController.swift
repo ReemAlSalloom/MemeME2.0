@@ -156,23 +156,29 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         return memedImage
     }
     
-    struct Meme {
-        var topText: String!
-        var bottomText: String!
-        var originalImage:UIImage!
-        var memedImage: UIImage!
+   
+    
+    var memes: [Meme]! {
+        let object =  UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        return appDelegate.memes
     }
     
     func save() {
         
         
         // Create the meme
-        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+        let meme = Meme(top: topTextField.text!, bottom: bottomTextField.text!, img: imageView.image!, mImg: generateMemedImage())
+        
         
         //append to addDelegate memes array
         //(UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+      //  let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        let object =  UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        
         //TODO: issue why cant I append new meme??
         appDelegate.memes.append(meme)
     }
