@@ -76,19 +76,16 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         //create activity controller and pass the MememedImage
         let controller = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
         
-        controller.completionWithItemsHandler = {(activityType: UIActivity.ActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) in
-            
-            self.save()
-            //
-            //            var meme : Meme!{
-            //                didSet{
-            //
-            //                }
-            //            }
-        }
         
-        //preset the activity controller
+        controller.completionWithItemsHandler = {(activity, completed, items, error) in
+            if (completed) {
+                self.save()
+                
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
         present(controller, animated: true, completion: nil)
+        
     }
     
     
@@ -109,6 +106,9 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         
         
     }
+    @IBAction func cancelButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any])
     {
@@ -122,11 +122,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
-        
-        
-        func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-            dismiss(animated: true, completion: nil)
-        }
+//
+//
+//        func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+//            dismiss(animated: true, completion: nil)
+//        }
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
@@ -154,6 +154,8 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         
         toggleBars(flag : false)
         return memedImage
+        
+        
     }
     
    
@@ -166,15 +168,9 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func save() {
         
-        
         // Create the meme
         let meme = Meme(top: topTextField.text!, bottom: bottomTextField.text!, img: imageView.image!, mImg: generateMemedImage())
         
-        
-        //append to addDelegate memes array
-        //(UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
-        
-      //  let appDelegate = UIApplication.shared.delegate as! AppDelegate
         
         let object =  UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate

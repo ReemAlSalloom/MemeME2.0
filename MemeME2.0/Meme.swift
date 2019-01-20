@@ -25,12 +25,7 @@ struct Meme {
         
     }
     
-//    func save() {
-//        // TODO: Create meme, do I need to call this save() here or use it in EditMemeViewController
-//        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
-//    }
-    
-   
+
 }
 
 

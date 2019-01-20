@@ -11,9 +11,8 @@ import UIKit
 
 class MemeCollectionViewCell: UICollectionViewCell {
     
-    //TODO: howcan I link this to collection images?
     @IBOutlet weak var memeImageView: UIImageView!
-    
+    @IBOutlet weak var memeLabel: UILabel!
     
     
 }
