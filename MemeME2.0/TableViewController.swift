@@ -11,7 +11,7 @@
 import UIKit
 
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class TableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
    
@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]

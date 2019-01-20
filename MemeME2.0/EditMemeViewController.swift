@@ -26,7 +26,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeColor.rawValue): UIColor.black,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): 2.0]
+        NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): -4.0]
     
     
     
@@ -190,7 +190,9 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     
     @objc func keyboardWillShow(_ notification: Notification)
     {
-        view.frame.origin.y -= getKeyboardHeight(notification)
+        if bottomTextField.isFirstResponder {
+            view.frame.origin.y -= getKeyboardHeight(notification)
+        }
     }
     
     @objc func keyboardWillHide(_ notification: Notification)

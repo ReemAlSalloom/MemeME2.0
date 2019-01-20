@@ -89,7 +89,7 @@
         <!--Table-->
         <scene sceneID="GOG-iH-khk">
             <objects>
-                <viewController title="Table" id="kgc-pd-2Dd" customClass="ViewController" customModule="MemeME2_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Table" id="kgc-pd-2Dd" customClass="TableViewController" customModule="MemeME2_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTX-X4-UQI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgm-vb-Sog" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-622" y="-37"/>
+            <point key="canvasLocation" x="-332" y="396"/>
         </scene>
         <!--Collection-->
         <scene sceneID="Lvm-wK-cMe">
@@ -299,6 +299,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dcv-OZ-8Q8"/>
+        <segue reference="F68-4V-1qN"/>
     </inferredMetricsTieBreakers>
 </document>
