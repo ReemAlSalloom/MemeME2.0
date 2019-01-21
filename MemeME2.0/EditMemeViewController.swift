@@ -29,6 +29,14 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         NSAttributedString.Key(rawValue: NSAttributedString.Key.strokeWidth.rawValue): -4.0]
     
     
+    func configureTextfield(textfield: UITextField, withText: String)
+    {
+        textfield.delegate = self
+        textfield.defaultTextAttributes = memeTextAttributes
+        textfield.textAlignment = .center
+        textfield.text = withText
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,18 +45,11 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         topTextField.delegate = self
         bottomTextField.delegate = self
         
-        //Issue: text is not aligned
-        topTextField.textAlignment = NSTextAlignment.center
-        bottomTextField.textAlignment = NSTextAlignment.center
-        
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.defaultTextAttributes = memeTextAttributes
-        
-        topTextField.text = "TOP TEXT"
-        bottomTextField.text = "BOTTOM TEXT"
-        
-        
+       
+        configureTextfield(textfield: topTextField, withText: "Top Text")
+        configureTextfield(textfield: bottomTextField, withText: "Bottom text ")
     }
+   
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -122,11 +123,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
             fatalError("Expected a dictionary containing an image, but was provided the following: \(info)")
         }
         
-//
-//
-//        func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-//            dismiss(animated: true, completion: nil)
-//        }
+
         
         // Dismiss the picker.
         dismiss(animated: true, completion: nil)
@@ -175,7 +172,6 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         let object =  UIApplication.shared.delegate
         let appDelegate = object as! AppDelegate
         
-        //TODO: issue why cant I append new meme??
         appDelegate.memes.append(meme)
     }
     
@@ -217,7 +213,12 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         
     }
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        topTextField.resignFirstResponder()
+        bottomTextField.resignFirstResponder()
+        return true
+        
+    }
     
     
 }
