@@ -11,7 +11,6 @@ import UIKit
 class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate
 {
     
-    @IBOutlet weak var imagePickerView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
@@ -95,10 +94,10 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
         imageController.sourceType = .camera
         present(imageController, animated: true, completion: nil)
         
-        
+    }
         func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
             dismiss(animated: true, completion: nil)
-        }    }
+        }
     
     
     @IBAction func pickAnImage(_ sender: Any) {
