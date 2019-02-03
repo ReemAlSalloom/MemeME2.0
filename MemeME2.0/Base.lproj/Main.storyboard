@@ -236,7 +236,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-mg-2qY" userLabel="bottomFieldText">
-                                <rect key="frame" x="54" y="258" width="565" height="50"/>
+                                <rect key="frame" x="54" y="252" width="565" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Dab-iD-Yoo"/>
                                 </constraints>
@@ -248,15 +248,13 @@
                         <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fOA-xY-Tap" firstAttribute="trailing" secondItem="KwU-TC-ktu" secondAttribute="trailing" id="0qY-Mt-cRs"/>
+                            <constraint firstItem="iT0-tV-ZfD" firstAttribute="top" secondItem="NgE-mg-2qY" secondAttribute="bottom" constant="40" id="CTt-qQ-zsm"/>
                             <constraint firstItem="eRP-M4-y4v" firstAttribute="leading" secondItem="KwU-TC-ktu" secondAttribute="leading" id="F8H-Rg-LP6"/>
                             <constraint firstItem="iT0-tV-ZfD" firstAttribute="trailing" secondItem="KwU-TC-ktu" secondAttribute="trailing" id="GPe-Sc-VTL"/>
                             <constraint firstItem="iT0-tV-ZfD" firstAttribute="top" secondItem="eRP-M4-y4v" secondAttribute="bottom" id="IcF-vI-kBV"/>
                             <constraint firstItem="eRP-M4-y4v" firstAttribute="top" secondItem="fOA-xY-Tap" secondAttribute="bottom" id="LId-p7-mW3"/>
                             <constraint firstItem="eRP-M4-y4v" firstAttribute="top" secondItem="fOA-xY-Tap" secondAttribute="bottom" id="Ll1-Bu-UIq"/>
                             <constraint firstItem="iT0-tV-ZfD" firstAttribute="leading" secondItem="KwU-TC-ktu" secondAttribute="leading" id="c1D-qc-8Sp"/>
-                            <constraint firstItem="NgE-mg-2qY" firstAttribute="top" secondItem="5oD-uT-zwp" secondAttribute="bottom" constant="380" id="flX-73-4A6">
-                                <variation key="heightClass=compact-widthClass=compact" constant="150"/>
-                            </constraint>
                             <constraint firstItem="KwU-TC-ktu" firstAttribute="trailing" secondItem="NgE-mg-2qY" secondAttribute="trailing" constant="48" id="gNo-qu-7M3"/>
                             <constraint firstItem="KwU-TC-ktu" firstAttribute="bottom" secondItem="iT0-tV-ZfD" secondAttribute="bottom" constant="1" id="iOH-gk-cNU"/>
                             <constraint firstItem="fOA-xY-Tap" firstAttribute="top" secondItem="KwU-TC-ktu" secondAttribute="top" id="jRy-cO-MDM"/>
