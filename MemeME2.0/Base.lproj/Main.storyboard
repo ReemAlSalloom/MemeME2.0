@@ -236,7 +236,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NgE-mg-2qY" userLabel="bottomFieldText">
-                                <rect key="frame" x="54" y="520" width="273" height="50"/>
+                                <rect key="frame" x="54" y="519" width="273" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Dab-iD-Yoo"/>
                                 </constraints>
@@ -248,7 +248,7 @@
                         <color key="backgroundColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fOA-xY-Tap" firstAttribute="trailing" secondItem="KwU-TC-ktu" secondAttribute="trailing" id="0qY-Mt-cRs"/>
-                            <constraint firstItem="iT0-tV-ZfD" firstAttribute="top" secondItem="NgE-mg-2qY" secondAttribute="bottom" constant="52" id="CTt-qQ-zsm"/>
+                            <constraint firstItem="iT0-tV-ZfD" firstAttribute="top" secondItem="NgE-mg-2qY" secondAttribute="bottom" constant="53" id="CTt-qQ-zsm"/>
                             <constraint firstItem="eRP-M4-y4v" firstAttribute="leading" secondItem="KwU-TC-ktu" secondAttribute="leading" id="F8H-Rg-LP6"/>
                             <constraint firstItem="iT0-tV-ZfD" firstAttribute="trailing" secondItem="KwU-TC-ktu" secondAttribute="trailing" id="GPe-Sc-VTL"/>
                             <constraint firstItem="iT0-tV-ZfD" firstAttribute="top" secondItem="eRP-M4-y4v" secondAttribute="bottom" id="IcF-vI-kBV"/>
